@@ -1,0 +1,79 @@
+/* style.css */
+
+body {
+    font-family: cursive;
+    margin:  10px 50px 20px 0;
+    padding: 10px;
+    background-color: skyblue;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: rgb(16, 169, 207);
+    color: red;
+  }
+  
+  h2 {
+    margin-top: 10px;
+    color: rgb(10, 4, 133);
+  }
+  
+  div {
+    border-block-end-style: groove; writing-mode: horizontal-tb;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    display: grid;
+    margin: 0 auto;
+  }
+  
+  .price {
+    color: #00c;
+    font-weight: bold;
+  }
+  
+  .in-stock {
+    color: green;
+    font-weight: 900;
+   
+  }
+  
+  .remove {
+    color: red;
+    font-weight: bold;
+  }
+  
+  fieldset {
+    border: thick double #070706;
+    padding: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"],
+  input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #00c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  h5 {
+    margin-top: 10px;
+  }
+  
