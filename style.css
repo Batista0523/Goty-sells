@@ -4,7 +4,7 @@ body {
     font-family: cursive;
     margin:  10px 50px 20px 0;
     padding: 10px;
-    background-color: skyblue;
+   
   }
   
   h1 {
@@ -31,12 +31,12 @@ body {
   }
   
   .price {
-    color: #00c;
+    color: rgb(103, 199, 13);
     font-weight: bold;
   }
   
   .in-stock {
-    color: green;
+    color: rgb(101, 123, 101);
     font-weight: 900;
    
   }
