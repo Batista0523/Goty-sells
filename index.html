@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 <body>
     <div id="unitList">
-        </div>
+    </div>
     <div>
         <h1>HVCA INVENTORY</h1>
     </div>
@@ -22,6 +23,7 @@
         <div>Price <span class="price">$4,043.44</span></div>
         <div>in-stock <span class="in-stock"></span></div>
         <div>Remove <span class="remove"></span></div>
+
     </div>
 
 
@@ -46,37 +48,37 @@
 
 
     </div>
-    
+
     <fieldset>
         <div>
             <legend>ADD NEW UNIT</legend>
-            
+
             <label for="name">Unit *</label>
             <input type="text" id="name" placeholder="Unit Type" required>
-            
-            
-            
+
+
+
             <label for="creator">Model*</label>
             <input type="text" id="creator" placeholder="Model Number" required>
-            
-            
+
+
             <label for="page-url">Page URL*</label>
             <input type="text" id="page-url" placeholder="Web site" required>
-            
-            
+
+
             <label for="price">Price*</label>
             <input type="text" id="price" placeholder="$" required>
-            
-            
+
+
             <select id="availability">
                 <option value="in-stock">in-stock</option>
                 <option value="out-stock">out-stock</option>
             </select>
             <input type="submit" id="submitButton" value="Submit">
             <input type="reset" value="Reset">
-        </fieldset>
+    </fieldset>
     </div>
-      <h5>All fields with * are required</h5>
+    <h5>All fields with * are required</h5>
     </div>
     <script>
         // Get references to the input fields and submit button
@@ -87,21 +89,21 @@
         const availabilityInput = document.getElementById('availability');
         const submitButton = document.getElementById('submitButton');
         const unitList = document.getElementById('unitList');
-      
+
         // Add event listener to the submit button
-        submitButton.addEventListener('click', function(event) {
-          event.preventDefault(); // Prevent the default form submission
-      
-          // Get the values from the input fields
-          const nameValue = nameInput.value;
-          const creatorValue = creatorInput.value;
-          const pageUrlValue = pageUrlInput.value;
-          const priceValue = priceInput.value;
-          const availabilityValue = availabilityInput.value;
-      
-          // Create a new unit element
-          const newUnit = document.createElement('div');
-          newUnit.innerHTML = `
+        submitButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the values from the input fields
+            const nameValue = nameInput.value;
+            const creatorValue = creatorInput.value;
+            const pageUrlValue = pageUrlInput.value;
+            const priceValue = priceInput.value;
+            const availabilityValue = availabilityInput.value;
+
+            // Create a new unit element
+            const newUnit = document.createElement('div');
+            newUnit.innerHTML = `
             <h2>${nameValue}</h2>
             <h4>${creatorValue}</h4>
             <img src="${pageUrlValue}" alt="" width="200" height="200">
@@ -109,21 +111,22 @@
             <div>${availabilityValue} <span class="in-stock"></span></div>
             <div>Remove <span class="remove"></span></div>
           `;
-      
-          // Append the new unit to the unit list
-          unitList.appendChild(newUnit);
-      
-          // Reset the input fields
-          nameInput.value = '';
-          creatorInput.value = '';
-          pageUrlInput.value = '';
-          priceInput.value = '';
-          availabilityInput.value = 'in-stock';
+
+            // Append the new unit to the unit list
+            unitList.appendChild(newUnit);
+
+            // Reset the input fields
+            nameInput.value = '';
+            creatorInput.value = '';
+            pageUrlInput.value = '';
+            priceInput.value = '';
+            availabilityInput.value = 'in-stock';
         });
-      </script>
-      
+    </script>
 
 
+   
 </body>
+
 
 </html>
