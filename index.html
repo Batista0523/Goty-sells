@@ -1,132 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <title>HVCA INVENTORY</title>
 </head>
 
 <body>
+    <h1>HVCA INVENTORY</h1>
+
     <div id="unitList">
-    </div>
-    <div>
-        <h1>HVCA INVENTORY</h1>
-    </div>
+        <div class="unit">
+            <h2>Ceiling Cassette</h2>
+            <h4>M2H20O12120000</h4>
+            <img src="https://www.acwholesalers.com/products-image/600/mass_82680_600.png" alt="" width="200"
+                height="200">
+            <div>Price: <span class="price">$4,043.44</span></div>
+            <div>In Stock: <span class="in-stock">Yes</span></div>
+            <button class="remove">Remove</button>
+        </div>
 
-    <div>
-        <h2>Ceiling Cassette</h2>
-        <h4>M2H20O12120000</h4>
-        <img src="https://www.acwholesalers.com/products-image/600/mass_82680_600.png" alt="" width="200" height="200">
-        <div>Price <span class="price">$4,043.44</span></div>
-        <div>in-stock <span class="in-stock"></span></div>
-        <div>Remove <span class="remove"></span></div>
+        <div class="unit">
+            <h2>FS-Series 9k</h2>
+            <h4>MSZ-FS09NA</h4>
+            <img src="https://www.acwholesalers.com/products-image/600/msz-fs09na_110929_1000_378d027df42d3a2fbbec7a80df944fe6.jpg"
+                alt="" width="200" height="200">
+            <div>Price: <span class="price">$663.00</span></div>
+            <div>In Stock: <span class="in-stock">Yes</span></div>
+            <button class="remove">Remove</button>
+        </div>
 
-    </div>
-
-
-    <div>
-        <h2>FS-Series 9k</h2>
-        <h4>MSZ-FS09NA</h4>
-        <img src="https://www.acwholesalers.com/products-image/600/msz-fs09na_110929_1000_378d027df42d3a2fbbec7a80df944fe6.jpg"
-            alt="" width="200" height="200">
-        <div>Price <span class="price">$663.00</span></div>
-        <div>in-stock <span class="in-stock"></span></div>
-        <div>Remove <span class="remove"></span></div>
-
-    </div>
-
-    <div>
-        <h2>M-Series H2i Ceiling Cassette </h2>
-        <h4>SL-KF12NAH-SD</h4>
-        <img src="https://www.acwholesalers.com/products-image/600/mass_107672_.jpg" alt="" width="200" height="200">
-        <div>Price <span class="price">$2551.76</span></div>
-        <div>in-stock <span class="in-stock"></span></div>
-        <div>Remove <span class="remove"></span></div>
-
-
+        <div class="unit">
+            <h2>M-Series H2i Ceiling Cassette</h2>
+            <h4>SL-KF12NAH-SD</h4>
+            <img src="https://www.acwholesalers.com/products-image/600/mass_107672_.jpg" alt="" width="200"
+                height="200">
+            <div>Price: <span class="price">$2551.76</span></div>
+            <div>In Stock: <span class="in-stock">Yes</span></div>
+            <button class="remove">Remove</button>
+        </div>
     </div>
 
-    <fieldset>
-        <div>
+    <form id="unitForm">
+        <fieldset>
             <legend>ADD NEW UNIT</legend>
 
             <label for="name">Unit *</label>
-            <input type="text" id="name" placeholder="Unit Type" required>
+            <input type="text" id="name" placeholder="Unit Model" required>
 
+            <label for="availability">Serie *</label>
+            <select id="availability" required>
+                <option value="M-Series H2i">M-Series H2i</option>
+                <option value="M-Series 115V">M-Series 115V</option>
+                <option value="HM-Series">HM-Series</option>
+            </select>
 
-
-            <label for="creator">Model*</label>
-            <input type="text" id="creator" placeholder="Model Number" required>
-
-
-            <label for="page-url">Page URL*</label>
-            <input type="text" id="page-url" placeholder="Web site" required>
-
-
-            <label for="price">Price*</label>
+            <label for="price">Price *</label>
             <input type="text" id="price" placeholder="$" required>
 
-
-            <select id="availability">
-                <option value="in-stock">in-stock</option>
-                <option value="out-stock">out-stock</option>
+            <label for="stock">In Stock *</label>
+            <select id="stock" required>
+                <option value="in-stock">In Stock</option>
+                <option value="out-of-stock">Out of Stock</option>
             </select>
-            <input type="submit" id="submitButton" value="Submit">
-            <input type="reset" value="Reset">
-    </fieldset>
-    </div>
-    <h5>All fields with * are required</h5>
-    </div>
-    <script>
-        // Get references to the input fields and submit button
-        const nameInput = document.getElementById('name');
-        const creatorInput = document.getElementById('creator');
-        const pageUrlInput = document.getElementById('page-url');
-        const priceInput = document.getElementById('price');
-        const availabilityInput = document.getElementById('availability');
-        const submitButton = document.getElementById('submitButton');
-        const unitList = document.getElementById('unitList');
 
-        // Add event listener to the submit button
-        submitButton.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent the default form submission
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </form>
 
-            // Get the values from the input fields
-            const nameValue = nameInput.value;
-            const creatorValue = creatorInput.value;
-            const pageUrlValue = pageUrlInput.value;
-            const priceValue = priceInput.value;
-            const availabilityValue = availabilityInput.value;
-
-            // Create a new unit element
-            const newUnit = document.createElement('div');
-            newUnit.innerHTML = `
-            <h2>${nameValue}</h2>
-            <h4>${creatorValue}</h4>
-            <img src="${pageUrlValue}" alt="" width="200" height="200">
-            <div>Price <span class="price">${priceValue}</span></div>
-            <div>${availabilityValue} <span class="in-stock"></span></div>
-            <div>Remove <span class="remove"></span></div>
-          `;
-
-            // Append the new unit to the unit list
-            unitList.appendChild(newUnit);
-
-            // Reset the input fields
-            nameInput.value = '';
-            creatorInput.value = '';
-            pageUrlInput.value = '';
-            priceInput.value = '';
-            availabilityInput.value = 'in-stock';
-        });
-    </script>
-
-
-   
+    <script src="main.js"></script>
 </body>
-
 
 </html>
