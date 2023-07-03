@@ -1,41 +1,46 @@
-const unitForm = document.querySelector('fieldset');
+const unitForm = document.getElementById('unitForm');
 const unitList = document.getElementById('unitList');
 
-unitForm.addEventListener('submit', function (event) {
+// Event listener for form submission
+unitForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
   const nameInput = document.getElementById('name');
   const availabilityInput = document.getElementById('availability');
   const priceInput = document.getElementById('price');
+  const stockInput = document.getElementById('stock');
 
   const name = nameInput.value;
   const availability = availabilityInput.value;
   const price = priceInput.value;
-  const inStock = document.querySelector('input[name="stock"]:checked').value;
+  const stock = stockInput.value;
 
   const imageUrl = getImageUrl(availability);
 
-  // Create a new unit element
   const newUnit = document.createElement('div');
   newUnit.classList.add('unit');
 
-  // Set the inner HTML of the new unit element with the dynamic content
   newUnit.innerHTML = `
     <h2>${name}</h2>
     <h4>${availability}</h4>
     <img src="${imageUrl}" alt="" width="200" height="200">
     <div>Price: <span class="price">${price}</span></div>
-    <div>In Stock: <span class="in-stock">${inStock}</span></div>
+    <div>In Stock: <span class="in-stock">${stock}</span></div>
     <button class="remove">Remove</button>
   `;
 
-  // Add the new unit to the unit list
   unitList.appendChild(newUnit);
 
-  // Clear the form inputs
   nameInput.value = '';
   availabilityInput.selectedIndex = 0;
   priceInput.value = '';
+  stockInput.selectedIndex = 0;
+
+  // Add event listener to the new "Remove" button
+  const removeButton = newUnit.querySelector('.remove');
+  removeButton.addEventListener('click', function() {
+    unitList.removeChild(newUnit);
+  });
 });
 
 function getImageUrl(availability) {
@@ -47,3 +52,12 @@ function getImageUrl(availability) {
     return 'https://www.acwholesalers.com/products-image/600/mass_81586_600.png';
   }
 }
+
+// Add event listeners to existing "Remove" buttons
+const removeButtons = document.querySelectorAll('.remove');
+removeButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    const unit = button.parentNode;
+    unitList.removeChild(unit);
+  });
+});
