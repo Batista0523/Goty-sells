@@ -4,7 +4,7 @@ body {
     font-family: cursive;
     margin:  10px 50px 20px 0;
     padding: 10px;
-   
+   background-color: rgba(216, 222, 222, 0.542);
   }
   
   h1 {
@@ -28,26 +28,28 @@ body {
   img {
     display: grid;
     margin: 0 auto;
+    border-style: dashed groove none dotted;
   }
   
   .price {
-    color: rgb(103, 199, 13);
+    color: rgb(78, 136, 24);
     font-weight: bold;
   }
   
   .in-stock {
-    color: rgb(101, 123, 101);
-    font-weight: 900;
+    color: rgb(59, 131, 59);
+    font-weight: 100;
    
   }
   
   .remove {
     color: red;
-    font-weight: bold;
+    font-family: cursive;
+    border-style: inset;
   }
   
   fieldset {
-    border: thick double #070706;
+    border: thick double #053ae7;
     padding: 0;
   }
   
@@ -61,7 +63,8 @@ body {
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
-    color: #e01919;
+    color: #6e1e1e;
+    background-color: rgb(43, 16, 16);
   
   }
   
@@ -69,7 +72,7 @@ body {
   input[type="reset"] {
     padding: 10px 20px;
     background-color: rgb(167, 204, 0);
-    color: #e01919;
+    color: blue;
     border: none;
     cursor: pointer;
     margin-right: 10px;

@@ -1,35 +1,27 @@
-# HVAC Inventory Management System
+# HVCA INVENTORY
 
-Welcome to the HVAC Inventory Management System! This web application allows users to manage and view information about HVAC units. Users can browse the inventory, add new units, remove existing units, and update unit details. Below are the instructions on how to use the different features of the application.
+This is a simple inventory management system for HVAC units. It allows you to add units to the inventory and display them on the webpage.
 
-# Browse Inventory
+## Features
 
-Visit the HVAC Inventory Management System website.
-Explore the list of available HVAC units, including their names, prices, and stock availability.
+- Add new units to the inventory with the following details:
+  - Unit model
+  - Serie
+  - Price
+  - Stock availability
+- Display the added units with their details and an image
+- Remove units from the inventory
 
-# Add New Units
+## Technologies Used
 
-Navigate to the unit management section or dashboard.
-Click on the "Summit button" to create a new unit.
-Fill in the required information for the unit, such as model number, specifications, price, and stock availability.
-Submit the unit to add it to the inventory.
+- HTML
+- CSS
+- JavaScript
 
-# Remove Units
+## How to Use
 
-Navigate to the unit management section or dashboard.
-Locate the unit you want to remove from the inventory.
-Click on the "Delete" or "Remove" button next to the unit.
-Confirm the deletion when prompted.
-The unit will be permanently removed from the inventory and will no longer be visible to users.
-
-
-
-# Contributing
-
-Contributions to the HVAC Inventory Management System are welcome! If you'd like to contribute to this project, please follow these steps:
-
-Fork the repository.
-Create a new branch: git checkout -b feature/your-feature-name
-Make your changes and commit them: git commit -m 'Add some feature'
-Push to the branch: git push origin feature/your-feature-name
-Submit a pull request.
+- Fill out the "ADD NEW UNIT" form with the unit details.
+- Click the "Submit" button to add the unit to the inventory.
+- The unit will be displayed in the inventory list.
+- To remove a unit, click the "Remove" button next to the unit.
+- You can add, remove, and manage multiple units in the inventory.
