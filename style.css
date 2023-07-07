@@ -1,84 +1,65 @@
-/* style.css */
-
 body {
-    font-family: cursive;
-    margin:  10px 50px 20px 0;
-    padding: 10px;
-   background-color: rgba(216, 222, 222, 0.542);
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 10px;
-    background-color: rgb(16, 169, 207);
-    color: red;
-  }
-  
-  h2 {
-    margin-top: 10px;
-    color: rgb(10, 4, 133);
-  }
-  
-  div {
-    border-block-end-style: groove; writing-mode: horizontal-tb;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  img {
-    display: grid;
-    margin: 0 auto;
-    border-style: dashed groove none dotted;
-  }
-  
-  .price {
-    color: rgb(78, 136, 24);
-    font-weight: bold;
-  }
-  
-  .in-stock {
-    color: rgb(59, 131, 59);
-    font-weight: 100;
-   
-  }
-  
-  .remove {
-    color: red;
-    font-family: cursive;
-    border-style: inset;
-  }
-  
-  fieldset {
-    border: thick double #053ae7;
-    padding: 0;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  select {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    color: #6e1e1e;
-    background-color: rgb(43, 16, 16);
-  
-  }
-  
-  input[type="submit"],
-  input[type="reset"] {
-    padding: 10px 20px;
-    background-color: rgb(167, 204, 0);
-    color: blue;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  h5 {
-    margin-top: 10px;
-  }
-  
+  font-family: cursive;
+  margin: 10px 50px 20px 0;
+  padding: 10px;
+  background-color: rgba(216, 222, 222, 0.542);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: rgb(16, 169, 207);
+  color: red;
+}
+
+.unit {
+  border-block-end-style: groove;
+  writing-mode: horizontal-tb;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  border-style: dashed groove none dotted;
+}
+
+.unitList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+fieldset {
+  border: thick double #32a1ce;
+  padding: 40px;
+}
+
+label {
+  display: block;
+  margin-bottom: 1px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 1px;
+  margin-bottom: 1px;
+  color: #161855ec;
+  background-color: rgb(245, 238, 238);
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 10px 20px;
+  background-color: rgb(167, 204, 0);
+  color: blue;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}

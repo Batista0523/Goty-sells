@@ -50,7 +50,7 @@ function getImageUrl(availability) {
     return 'https://www.acwholesalers.com/products-image/600/MZ-JP12WA_99497_600.png';
   } else if (availability === 'HM-Series') {
     return 'https://www.acwholesalers.com/products-image/600/mass_81586_600.png';
-  }
+  } 
 }
 
 // Add event listeners to existing "Remove" buttons
